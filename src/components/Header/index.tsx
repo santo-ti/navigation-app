@@ -1,6 +1,13 @@
+import { ButtonIcon, ButtonIconProps } from "@/components/ButtonIcon";
+import { Title } from "@/components/Title";
 import { View, ViewProps } from "react-native";
 
-export function Header({ children, ...rest }: ViewProps) {
+export type HeaderProps = ViewProps & {
+  title: string;
+  icon: ButtonIconProps["name"];
+};
+
+export function Header({ title, icon, ...rest }: HeaderProps) {
   return (
     <View
       style={{
@@ -12,7 +19,8 @@ export function Header({ children, ...rest }: ViewProps) {
       }}
       {...rest}
     >
-      {children}
+      <Title>{title}</Title>
+      <ButtonIcon name={icon} />
     </View>
   );
 }
