@@ -1,11 +1,11 @@
 import { View } from "react-native";
 
 import { Header } from "@/components/Header";
-import { StackRoutesProps } from "@/routes/StackRoutes";
+import { TabRoutesProps } from "@/routes/TabRoutes";
 
 // type RouteParams = StackRoutesProps<"Product">;
 
-export function Product({ navigation, route }: StackRoutesProps<"Product">) {
+export function Product({ navigation, route }: TabRoutesProps<"Product">) {
   // const { params } = useRoute<RouteParams["route"]>();
   const productId = route.params?.id;
 
