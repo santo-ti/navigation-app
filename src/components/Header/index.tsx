@@ -6,12 +6,14 @@ export type HeaderProps = ViewProps & {
   title: string;
   icon: ButtonIconProps["name"];
   iconPosition?: "left" | "right";
+  handleIconClick?: () => void;
 };
 
 export function Header({
   title,
   icon,
   iconPosition = "right",
+  handleIconClick,
   ...rest
 }: HeaderProps) {
   return (
@@ -25,9 +27,13 @@ export function Header({
       }}
       {...rest}
     >
-      {iconPosition === "left" && <ButtonIcon name={icon} />}
+      {iconPosition === "left" && (
+        <ButtonIcon name={icon} onPress={handleIconClick} />
+      )}
       <Title>{title}</Title>
-      {iconPosition === "right" && <ButtonIcon name={icon} />}
+      {iconPosition === "right" && (
+        <ButtonIcon name={icon} onPress={handleIconClick} />
+      )}
     </View>
   );
 }
