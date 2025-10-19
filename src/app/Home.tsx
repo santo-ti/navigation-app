@@ -1,7 +1,7 @@
 import { View } from "react-native";
 
 import { Header } from "@/components/Header";
-import { StackRoutesProps } from "@/routes/StackRoustes";
+import { StackRoutesProps } from "@/routes/StackRoutes";
 
 export function Home({ navigation }: StackRoutesProps<"Home">) {
   return (
