@@ -9,7 +9,7 @@ export function Home({ navigation }: StackRoutesProps<"Home">) {
       <Header
         title="Home"
         icon="add-circle"
-        handleIconClick={() => navigation.navigate("Product")}
+        handleIconClick={() => navigation.navigate("Product", { id: "555" })}
       />
     </View>
   );
