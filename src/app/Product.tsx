@@ -1,11 +1,12 @@
-import { useNavigation } from "@react-navigation/native";
 import { View } from "react-native";
 
 import { Header } from "@/components/Header";
+import { StackRoutesParamList } from "@/routes/StackRoustes";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-export function Product() {
-  const navigation = useNavigation();
+type ProductProps = NativeStackScreenProps<StackRoutesParamList, "Product">;
 
+export function Product({ navigation }: ProductProps) {
   return (
     <View style={{ flex: 1, padding: 32, paddingTop: 54 }}>
       <Header

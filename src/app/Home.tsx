@@ -2,9 +2,9 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { View } from "react-native";
 
 import { Header } from "@/components/Header";
-import { StackRoutesParams } from "@/routes/StackRoustes";
+import { StackRoutesParamList } from "@/routes/StackRoustes";
 
-type HomeProps = NativeStackScreenProps<StackRoutesParams, "Home">;
+type HomeProps = NativeStackScreenProps<StackRoutesParamList, "Home">;
 
 export function Home({ navigation }: HomeProps) {
   return (
