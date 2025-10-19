@@ -5,9 +5,15 @@ import { View, ViewProps } from "react-native";
 export type HeaderProps = ViewProps & {
   title: string;
   icon: ButtonIconProps["name"];
+  iconPosition?: "left" | "right";
 };
 
-export function Header({ title, icon, ...rest }: HeaderProps) {
+export function Header({
+  title,
+  icon,
+  iconPosition = "right",
+  ...rest
+}: HeaderProps) {
   return (
     <View
       style={{
@@ -19,8 +25,9 @@ export function Header({ title, icon, ...rest }: HeaderProps) {
       }}
       {...rest}
     >
+      {iconPosition === "left" && <ButtonIcon name={icon} />}
       <Title>{title}</Title>
-      <ButtonIcon name={icon} />
+      {iconPosition === "right" && <ButtonIcon name={icon} />}
     </View>
   );
 }
