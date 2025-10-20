@@ -1,9 +1,9 @@
 import { View } from "react-native";
 
 import { Header } from "@/components/Header";
-import { TabRoutesProps } from "@/routes/TabRoutes";
+import { DrawerRoutesProps } from "@/routes/DrawerRoutes";
 
-export function Home({ navigation }: TabRoutesProps<"Home">) {
+export function Home({ navigation }: DrawerRoutesProps<"Home">) {
   return (
     <View style={{ flex: 1, padding: 32, paddingTop: 54 }}>
       <Header
