@@ -1,3 +1,4 @@
+import { MaterialIcons } from "@expo/vector-icons";
 import {
   BottomTabScreenProps,
   createBottomTabNavigator,
@@ -5,7 +6,6 @@ import {
 
 import { Home } from "@/app/Home";
 import { Product } from "@/app/Product";
-import { MaterialIcons } from "@expo/vector-icons";
 
 export type TabRoutesParamList = {
   Home: undefined;
