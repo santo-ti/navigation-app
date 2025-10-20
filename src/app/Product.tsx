@@ -13,7 +13,7 @@ export function Product({ navigation, route }: TabRoutesProps<"Product">) {
     <View style={{ flex: 1, padding: 32, paddingTop: 54 }}>
       <Header
         // title={"Product " + params?.id}
-        title={"Product " + productId}
+        title={"Produto " + productId}
         icon="arrow-circle-left"
         iconPosition="left"
         handleIconClick={() => navigation.goBack()}
