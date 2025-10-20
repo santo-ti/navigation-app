@@ -14,6 +14,7 @@ export function Header({
   icon,
   iconPosition = "right",
   handleIconClick,
+  children,
   ...rest
 }: HeaderProps) {
   return (
@@ -34,6 +35,7 @@ export function Header({
       {iconPosition === "right" && (
         <ButtonIcon name={icon} onPress={handleIconClick} />
       )}
+      {children}
     </View>
   );
 }
